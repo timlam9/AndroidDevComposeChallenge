@@ -13,12 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.timer
 
-import androidx.compose.ui.graphics.Color
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.flow
 
-val purple200 = Color(0xFFBB86FC)
-val purple500 = Color(0xFF6200EE)
-val purple700 = Color(0xFF3700B3)
-val teal200 = Color(0xFF03DAC5)
-val amber600 = Color(0xFFFFB300)
+class Timer {
+
+    companion object {
+
+        internal const val INTERVAL = 1000L
+    }
+
+    private var stop = false
+
+    fun startTimeCounter(seconds: Int) = flow {
+        stop = false
+        for (i in seconds downTo 0) {
+            if (!stop) {
+                emit(i)
+                delay(INTERVAL)
+            } else {
+                break
+            }
+        }
+    }
+
+    fun stopTimeCounter() {
+        stop = true
+    }
+}

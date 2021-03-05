@@ -4,12 +4,11 @@
 
 
 ## :scroll: Description
-<!--- Describe your app in one or two sentences -->
+Simple android CountDownTimer app using jetpack Compose. The (10 sec) timer starts by taping the start button.
 
 
 ## :bulb: Motivation and Context
-<!--- Optionally point readers to interesting parts of your submission. -->
-<!--- What are you especially proud of? -->
+-
 
 
 ## :camera_flash: Screenshots
