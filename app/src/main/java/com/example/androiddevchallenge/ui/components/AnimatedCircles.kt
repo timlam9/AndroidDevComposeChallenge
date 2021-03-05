@@ -15,7 +15,6 @@
  */
 package com.example.androiddevchallenge.ui.components
 
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -44,7 +43,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.ui.theme.amber600
 
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AnimatedCircles(animate: Boolean, animateColor: Boolean) {
     val color by animateColorAsState(if (animateColor) amber600 else MaterialTheme.colors.secondary)
